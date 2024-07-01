@@ -1,5 +1,5 @@
 import './App.css'
-import { MyComponent, defineCustomElements } from 'react-library';
+import { MyComponent, defineCustomElements, WebMfe } from 'react-library';
 
 defineCustomElements();
 
@@ -9,6 +9,7 @@ function App() {
     <>
       <h1>hi!</h1>
       <MyComponent first="Your" last="Name" />
+      <WebMfe></WebMfe>
     </>
   )
 }
