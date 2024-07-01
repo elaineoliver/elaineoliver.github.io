@@ -29,8 +29,28 @@ export const config: Config = {
           warn: true
         },
         {
+          src: './lib/brand-a-tokens.css',
+          dest: '../react-test-app/src/brand-a-tokens.css',
+          warn: true
+        },
+        {
+          src: './lib/brand-a-tokens.css',
+          dest: '../vue-test-app/src/brand-a-tokens.css',
+          warn: true
+        },
+        {
           src: './lib/brand-b-tokens.css',
           dest: './global/brand-b-tokens.css',
+          warn: true
+        },
+        {
+          src: './lib/brand-b-tokens.css',
+          dest: '../react-test-app/src/brand-b-tokens.css',
+          warn: true
+        },
+        {
+          src: './lib/brand-b-tokens.css',
+          dest: '../vue-test-app/src/brand-b-tokens.css',
           warn: true
         },
       ]

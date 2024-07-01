@@ -4,6 +4,12 @@ export const MyComponent = defineContainer('my-component', undefined, [
     'middle',
     'last'
 ]);
-export const WebButton = defineContainer('web-button', undefined);
+export const WebBox = defineContainer('web-box', undefined, [
+    'variant'
+]);
+export const WebButton = defineContainer('web-button', undefined, [
+    'variant',
+    'options'
+]);
 export const WebMfe = defineContainer('web-mfe', undefined);
 //# sourceMappingURL=components.js.map

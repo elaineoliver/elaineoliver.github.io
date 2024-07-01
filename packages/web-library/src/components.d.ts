@@ -20,7 +20,12 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface WebBox {
+        "variant"?: "primary" | "secondary" | "tertiary";
+    }
     interface WebButton {
+        "options"?: "outline";
+        "variant"?: "primary" | "secondary" | "tertiary";
     }
     interface WebMfe {
     }
@@ -31,6 +36,12 @@ declare global {
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
+    };
+    interface HTMLWebBoxElement extends Components.WebBox, HTMLStencilElement {
+    }
+    var HTMLWebBoxElement: {
+        prototype: HTMLWebBoxElement;
+        new (): HTMLWebBoxElement;
     };
     interface HTMLWebButtonElement extends Components.WebButton, HTMLStencilElement {
     }
@@ -46,6 +57,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "web-box": HTMLWebBoxElement;
         "web-button": HTMLWebButtonElement;
         "web-mfe": HTMLWebMfeElement;
     }
@@ -65,12 +77,18 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface WebBox {
+        "variant"?: "primary" | "secondary" | "tertiary";
+    }
     interface WebButton {
+        "options"?: "outline";
+        "variant"?: "primary" | "secondary" | "tertiary";
     }
     interface WebMfe {
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "web-box": WebBox;
         "web-button": WebButton;
         "web-mfe": WebMfe;
     }
@@ -80,6 +98,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "web-box": LocalJSX.WebBox & JSXBase.HTMLAttributes<HTMLWebBoxElement>;
             "web-button": LocalJSX.WebButton & JSXBase.HTMLAttributes<HTMLWebButtonElement>;
             "web-mfe": LocalJSX.WebMfe & JSXBase.HTMLAttributes<HTMLWebMfeElement>;
         }

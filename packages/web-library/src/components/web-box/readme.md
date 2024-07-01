@@ -1,4 +1,4 @@
-# web-button
+# web-box
 
 
 
@@ -9,22 +9,8 @@
 
 | Property  | Attribute | Description | Type                                     | Default     |
 | --------- | --------- | ----------- | ---------------------------------------- | ----------- |
-| `options` | `options` |             | `"outline"`                              | `undefined` |
 | `variant` | `variant` |             | `"primary" \| "secondary" \| "tertiary"` | `"primary"` |
 
-
-## Dependencies
-
-### Used by
-
- - [web-mfe](../web-mfe)
-
-### Graph
-```mermaid
-graph TD;
-  web-mfe --> web-button
-  style web-button fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

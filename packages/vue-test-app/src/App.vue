@@ -4,8 +4,22 @@
 
 <template>
   <header>
-    Windmolens zijn wij
+    <h1>Windmolens zijn wij</h1>
   </header>
 
   <RouterView />
 </template>
+
+<style>
+  @import "../../web-library/src/lib/brand-b-tokens.css";
+
+  body {
+    padding: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background: var(--brand-color-surface);
+    color: var(--brand-color-on-surface);
+  }
+</style>

@@ -21,24 +21,21 @@ export class WebMfe {
   render() {
     return (
       <Host>
-          <h2>Sample Micro-frontend</h2>
-          <ul>
-            {this.windmillData?.map(windmill => {
-              return (
-                <li>
-                    <h2>
-                      Windmill
-                    </h2>
-                    <p>
-                      {windmill.id}
-                    </p>
-                    <p>
-                      Estimated output: {365 * 24 * windmill.capacity * windmill.efficiency} kilowatt hours per year
-                    </p>
-                </li>
-              )
-            })}
-          </ul>
+        <ul>
+          {this.windmillData?.map(windmill => {
+            return (
+              <li>
+                <h2>
+                  Windmill {windmill.id}
+                </h2>
+                <p>
+                  Estimated output: {365 * 24 * windmill.capacity * windmill.efficiency} kilowatt hours per year
+                </p>
+                <web-button>More details</web-button>
+              </li>
+            )
+          })}
+        </ul>
       </Host>
     );
   }

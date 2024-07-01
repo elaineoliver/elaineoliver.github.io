@@ -1,5 +1,6 @@
 import './App.css'
-import { MyComponent, defineCustomElements, WebMfe } from 'react-library';
+import "../../web-library/src/lib/brand-a-tokens.css"
+import { defineCustomElements, WebMfe } from 'react-library';
 
 defineCustomElements();
 
@@ -7,8 +8,9 @@ function App() {
 
   return (
     <>
-      <h1>hi!</h1>
-      <MyComponent first="Your" last="Name" />
+      <header>
+        <h1>Energie netwerks zijn wij</h1>
+      </header>
       <WebMfe></WebMfe>
     </>
   )
