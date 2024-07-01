@@ -1,0 +1,222 @@
+/* Reset */
+
+:host {
+  display: inline-block;
+}
+
+.button {
+  // Init vars
+  --_background-color: none;
+  --_font-fs-lh: var(--brand-fs-m)/var(--brand-lh);
+  --_font-family: var(--brand-font-family);
+  --_font: normal 400 var(--_font-fs-lh, 1em/1lh) var(--_font-family);
+  --_outline-color: var(--brand-color-interaction, unset);
+  --_padding: 0;
+  --_text-color: inherit;
+  --_underline-color: transparent;
+
+  cursor: pointer;
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(1lh - 0.75rem);
+  padding: var(--_padding, 0);
+  border: var(--_border, 0);
+  border-radius: 0;
+  box-shadow: none;
+  font: var(--_font);
+  white-space: nowrap;
+  text-align: unset;
+  text-decoration: none;
+  background: var(--_background-color);
+  color: var(--_text-color);
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s, color 0.2s, outline 0.2s;
+}
+
+/* Text variants */
+
+.text {
+  gap: max(0.5rem, calc(1lh - 1rem));
+
+  --_text-color: var(--brand-color-interaction);
+
+  .label {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    text-decoration-color: var(--_underline-color);
+    transition: text-decoration 0.2s;
+  }
+  &:hover {
+    --_underline-color: inherit;
+  }
+  &:active {
+    --_underline-color: transparent;
+  }
+  &:disabled {
+    --_underline-color: transparent;
+  }
+}
+
+/* Block variants */
+
+.primary,
+.secondary,
+.tertiary {
+  width: fit-content;
+  height: fit-content;
+  min-width: calc(1lh + 0.5rem);
+  min-height: calc(1lh + 1rem);
+  padding: 0 calc(1lh);
+}
+
+.outlined {
+  border: 1px solid currentColor;
+}
+
+/* Tertiary and text has icon only */
+
+.tertiary, .has-icon-only {
+  --_background-color: var(--brand-color-surface);
+  &:hover {
+    --_background-color: var(--brand-color-surface-dim);
+  }
+  &:active {
+    --_background-color: var(--brand-color-surface-dimmer);
+  }
+  &:disabled {
+    --_background-color: var(--brand-color-surface);
+  }
+}
+
+.tertiary {
+  --_text-color: var(--brand-color-interaction);
+  &:hover {
+    --_text-color: var(--brand-color-interaction-dim);
+  }
+  &:active {
+    --_text-color: var(--brand-color-interaction-dimmer);
+  }
+  &:disabled {
+    --_text-color: var(--brand-color-interaction-inactive);
+  }
+}
+
+/* Secondary */
+
+.secondary {
+  --_border-color: var(--brand-color-interaction);
+  --_background-color: var(--brand-color-surface);
+  --_text-color: var(--brand-color-interaction);
+  &:hover {
+    --_border-color: var(--brand-color-interaction-dim);
+    --_background-color: var(--brand-color-surface-dim);
+    --_text-color: var(--brand-color-interaction-dim);
+  }
+  &:active {
+    --_border-color: var(--brand-color-interaction-dimmer);
+    --_background-color: var(--brand-color-surface-dimmer);
+    --_text-color: var(--brand-color-interaction-dimmer);
+  }
+  &:disabled {
+    --_border-color: var(--brand-color-interaction-inactive);
+    --_background-color: var(--brand-color-surface);
+    --_text-color: var(--brand-color-interaction-inactive);
+  }
+}
+
+/* Primary */
+
+.primary {
+  --_background-color: var(--brand-color-interaction);
+  --_text-color: var(--brand-color-on-interaction);
+  &:hover {
+    --_background-color: var(--brand-color-interaction-dim);
+  }
+  &:active {
+    --_background-color: var(--brand-color-interaction-dimmer);
+  }
+  &:disabled {
+    --_background-color: var(--brand-color-interaction-inactive);
+  }
+}
+
+// Options
+
+/* Fit */
+// Only for certain buttons?
+
+:host(.fit-container),
+.fit-container {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Has icon only */
+
+.has-icon-only {
+  padding: 0;
+  .label {
+    // @include sr-only;
+  }
+}
+
+/* Size */
+
+.size-small {
+  --_font-fs-lh: var(--brand-fs-lh-s);
+}
+
+.size-medium {
+  --_font-fs-lh: var(--brand-fs-lh-m);
+}
+
+.size-large {
+  --_font-fs-lh: var(--brand-fs-lh-l);
+}
+
+.size-auto {
+  --_font-fs-lh: 1em/1lh;
+}
+
+.color-auto {
+  --brand-color-interaction: currentColor;
+  --brand-color-surface: none;
+  &.primary {
+    .label, ::slotted(ditto-icon) {
+      filter: invert(100%);
+      mix-blend-mode: color;
+    }
+  }
+  &:hover {
+    --brand-color-interaction-dim: currentColor;
+    --brand-color-surface-dim: none;
+    filter: opacity(0.75);
+  }
+  &:active {
+    --brand-color-interaction-dimmer: currentColor;
+    --brand-color-surface-dimmer: none;
+    filter: none;
+  }
+  // filter: grayscale(100%) contrast(200%);
+  // &:hover {
+  //   filter: grayscale(100%) contrast(150%);
+  // }
+  // &:active {
+  //   filter: grayscale(100%) contrast(100%);
+  // }
+  // --brand-color-interaction: currentColor;
+  // --brand-color-on-interaction: inherit;
+  // filter: invert(100%) grayscale(100%);
+
+//   .label {
+//     isolation: isolate;
+//     color: currentColor;
+
+//       // color: inherit;
+//     }
+// }
+}
+
+

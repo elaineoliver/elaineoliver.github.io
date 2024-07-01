@@ -1,0 +1,96 @@
+/* Ditto Elsevier CSS */
+
+/* Fonts */
+
+/* body {
+  font-optical-sizing: auto;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+} */
+
+:root {
+  --brand-column-width: 75ch;
+  --brand-font-style: normal;
+  --brand-font-weight: normal;
+  --brand-font-family: "Nunito Sans", sans-serif;
+  --brand-font-optical-sizing: auto;
+  --brand-font-variant-settings: "wdth" 100, "YTLC" 500;
+
+  --brand-fs-xs:  calc(12/16 * 1rem); 
+  --brand-fs-s:   calc(14/16 * 1rem);
+  --brand-fs-m:   calc(16/16 * 1rem);
+  --brand-fs-l:   calc(20/16 * 1rem);
+  --brand-fs-xl:  calc(24/16 * 1rem);
+  --brand-fs-2xl: calc(32/16 * 1rem);
+  --brand-fs-3xl: calc(40/16 * 1rem);
+  --brand-fs-4xl: calc(48/16 * 1rem);
+  --brand-fs-5xl: calc(56/16 * 1rem); 
+
+  --brand-lh: calc(1em + 0.5rem);
+
+  --brand-font-xs:  var(--brand-font-style) var(--brand-font-weight) var(--brand-fs-xs)/var(--brand-lh)  var(--brand-font-family); 
+  --brand-font-s:   var(--brand-font-style) var(--brand-font-weight) var(--brand-fs-s)/var(--brand-lh)   var(--brand-font-family);
+  --brand-font-m:   var(--brand-font-style) var(--brand-font-weight) var(--brand-fs-m)/var(--brand-lh)   var(--brand-font-family);
+  --brand-font-l:   var(--brand-font-style) var(--brand-font-weight) var(--brand-fs-l)/var(--brand-lh)   var(--brand-font-family);
+  --brand-font-xl:  var(--brand-font-style) var(--brand-font-weight) var(--brand-fs-xl)/var(--brand-lh)  var(--brand-font-family);
+  --brand-font-2xl: var(--brand-font-style) var(--brand-font-weight) var(--brand-fs-2xl)/var(--brand-lh) var(--brand-font-family);
+  --brand-font-3xl: var(--brand-font-style) var(--brand-font-weight) var(--brand-fs-3xl)/var(--brand-lh) var(--brand-font-family);
+  --brand-font-4xl: var(--brand-font-style) var(--brand-font-weight) var(--brand-fs-4xl)/var(--brand-lh) var(--brand-font-family);
+  --brand-font-5xl: var(--brand-font-style) var(--brand-font-weight) var(--brand-fs-5xl)/var(--brand-lh) var(--brand-font-family);
+}
+
+.ditto-serif {
+  --brand-font-family: var(--brand-font-family-serif);
+}
+
+/* Colors */
+
+:root,
+.ditto-light-mode,
+.ditto-elsevier {
+  --brand-color-on-surface:           hsl(217 20% 18%); /* #252C37 */
+  --brand-color-on-surface-variant:   hsl(216 20% 42%); /* #566780 */
+  --brand-color-surface:              hsl(0 0% 100%); /* white */
+  --brand-color-surface-dim:          hsl(225 20% 96%); /* #F3F4F7 */
+  --brand-color-surface-dimmer:       hsl(218 20% 92%); /* #E7EAEF */
+
+  --brand-color-on-interaction:       hsl(0 0% 100%); /* white */
+  --brand-color-interaction:          hsl(201 88% 38%); /* #0c7dbb Not 39% lightness or there will be color contrast issues! */
+  --brand-color-interaction-dim:      hsl(202 87% 31%); /* #0a6395 */
+  --brand-color-interaction-dimmer:   hsl(201 88% 23%); /* #074A6E */
+  --brand-color-interaction-inactive: hsl(218 14% 62%); /* #919BAC */
+
+  --brand-color-on-critical:          hsl(0 0% 100%); /* white */
+  --brand-color-critical:             hsl(6 67% 47%); /* #C83727 */
+  --brand-color-critical-dim:         hsl(6 68% 39%); /* #A62E20 */
+  --brand-color-critical-dimmer:      hsl(6 67% 31%); /* #85251A */
+  --brand-color-critical-inactive:    hsl(6 100% 84%); /* #FFB5AD */
+}
+
+.ditto-dark-mode,
+.ditto-elsevier.ditto-dark-mode {
+  --brand-color-on-surface:           hsl(0 0% 100%); /* white */
+  --brand-color-on-surface-variant:   hsl(60	14%	62%); /* #919BAC */
+  --brand-color-surface:              hsl(217 20% 18%); /* #252C37 */
+  --brand-color-surface-dim:          hsl(196 89% 14%); /* #043243 */
+  --brand-color-surface-dimmer:       hsl(197 88% 16%); /* #05394D */
+  
+  --brand-color-on-interaction:       hsl(217 20% 18%); /* #252C37 */
+  --brand-color-interaction:          hsl(196 89% 61%); /* #44C4F4 */
+  --brand-color-interaction-dim:      hsl(196 89% 69%); /* #6AD0F6 */
+  --brand-color-interaction-dimmer:   hsl(196 88% 77%); /* #90DCF8 */
+  --brand-color-interaction-inactive: hsl(0 0% 52%); /* #858585 */
+
+  --brand-color-on-critical:          hsl(217 20% 18%); /* #252C37 */
+  --brand-color-critical:             hsl(6 100% 68%); /* #ff6b5a */
+  --brand-color-critical-dim:         hsl(6 100% 78%); /* #ff998d */
+  --brand-color-critical-dimmer:      hsl(7 100% 88%); /* #ffc7c0 */
+  --brand-color-critical-inactive:    hsl(6 67% 31%); /* #85251a */
+}
+
+.ditto-light-mode,
+.ditto-dark-mode {
+  background: var(--brand-color-surface);
+  color: var(--brand-color-on-surface);
+}
