@@ -1,0 +1,33 @@
+{
+  "name": "react-library",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Elaine Oliver <e.oliver@elsevier.com>",
+  "homepage": "https://github.com/elaineoliver/elaineoliver.github.io#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://rt.artifactory.tio.systems/artifactory/api/npm/npm-pure-public-virtual/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elaineoliver/elaineoliver.github.io.git"
+  },
+  "scripts": {
+  "test": "node ./__tests__/react-library.test.js",
+  "build": "npm run tsc",
+  "tsc": "tsc -p . --outDir ./dist"
+  },
+  "bugs": {
+    "url": "https://github.com/elaineoliver/elaineoliver.github.io/issues"
+  }
+}

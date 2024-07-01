@@ -1,6 +1,7 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 
+import { reactOutputTarget } from '@stencil/react-output-target';
 import { vueOutputTarget } from '@stencil/vue-output-target';
 
 export const config: Config = {
@@ -34,6 +35,10 @@ export const config: Config = {
         },
       ]
     },
+    reactOutputTarget({
+      componentCorePackage: 'web-library',
+      proxiesFile: '../react-library/lib/components/stencil-generated/index.ts',
+    }),
     vueOutputTarget({
       componentCorePackage: 'web-library',
       proxiesFile: '../vue-library/lib/components.ts',
