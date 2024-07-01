@@ -4,4 +4,5 @@ export const MyComponent = defineContainer('my-component', undefined, [
     'middle',
     'last'
 ]);
+export const WcButton = defineContainer('wc-button', undefined);
 //# sourceMappingURL=components.js.map

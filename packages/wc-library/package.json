@@ -47,5 +47,8 @@
     "jest-cli": "^29.7.0",
     "puppeteer": "^22.12.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@stencil/sass": "^3.0.12"
+  }
 }

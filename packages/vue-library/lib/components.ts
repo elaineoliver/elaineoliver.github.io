@@ -14,3 +14,6 @@ export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-co
   'last'
 ]);
 
+
+export const WcButton = /*@__PURE__*/ defineContainer<JSX.WcButton>('wc-button', undefined);
+
