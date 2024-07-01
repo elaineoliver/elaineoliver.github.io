@@ -1,4 +1,3 @@
-import './App.css'
 import "../../web-library/src/lib/brand-a-tokens.css"
 import { defineCustomElements, WebMfe } from 'react-library';
 

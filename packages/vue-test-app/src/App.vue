@@ -14,6 +14,7 @@
   @import "../../web-library/src/lib/brand-b-tokens.css";
 
   body {
+    margin: 0;
     padding: 2rem;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -21,5 +22,11 @@
     font-style: normal;
     background: var(--brand-color-surface);
     color: var(--brand-color-on-surface);
+  }
+
+  h1 {
+    margin-top: 0;
+    font: var(--brand-font-xl);
+    font-weight: bold;
   }
 </style>
