@@ -1,5 +1,5 @@
 {
-  "name": "wc-library",
+  "name": "web-library",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
@@ -7,11 +7,11 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/wc-library/wc-library.esm.js",
+  "unpkg": "dist/web-library/web-library.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/wc-library/wc-library.esm.js",
-      "require": "./dist/wc-library/wc-library.cjs.js"
+      "import": "./dist/web-library/web-library.esm.js",
+      "require": "./dist/web-library/web-library.cjs.js"
     },
     "./my-component": {
       "import": "./dist/components/my-component.js",

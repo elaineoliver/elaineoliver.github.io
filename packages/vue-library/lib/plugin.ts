@@ -1,5 +1,5 @@
 import { Plugin } from 'vue';
-import { defineCustomElements } from 'wc-library/loader';
+import { defineCustomElements } from 'web-library/loader';
 
 export const ComponentLibrary: Plugin = {
   async install() {

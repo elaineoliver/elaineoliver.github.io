@@ -1,4 +1,4 @@
-import { defineCustomElements } from 'wc-library/loader';
+import { defineCustomElements } from 'web-library/loader';
 export const ComponentLibrary = {
     async install() {
         defineCustomElements();

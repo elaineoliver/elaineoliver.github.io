@@ -4,7 +4,7 @@ import { sass } from '@stencil/sass';
 import { vueOutputTarget } from '@stencil/vue-output-target';
 
 export const config: Config = {
-  namespace: 'wc-library',
+  namespace: 'web-library',
   outputTargets: [
     {
       type: 'dist',
@@ -35,7 +35,7 @@ export const config: Config = {
       ]
     },
     vueOutputTarget({
-      componentCorePackage: 'wc-library',
+      componentCorePackage: 'web-library',
       proxiesFile: '../vue-library/lib/components.ts',
       includePolyfills: false,
     }),
