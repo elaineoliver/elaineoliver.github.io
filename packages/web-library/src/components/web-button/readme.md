@@ -1,4 +1,4 @@
-# wc-button
+# web-button
 
 
 

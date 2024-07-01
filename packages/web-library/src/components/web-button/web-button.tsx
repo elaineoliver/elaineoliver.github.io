@@ -1,11 +1,11 @@
 import { Component, Host, h } from '@stencil/core';
 
 @Component({
-  tag: 'wc-button',
-  styleUrl: 'wc-button.scss',
+  tag: 'web-button',
+  styleUrl: 'web-button.scss',
   shadow: true,
 })
-export class WcButton {
+export class WebButton {
   render() {
     return (
       <Host>

@@ -1,17 +1,17 @@
 import { http, HttpResponse } from "msw";
 
 export const handlers = [
-  http.get("/users", () => {
+  http.get("https://api.domain.com/windmills", () => {
     return HttpResponse.json([
       {
-        id: "c7b3d8e0-5e0b-4b0f-8b3a-3b9f4b3d3b3d",
-        firstName: "John",
-        lastName: "Maverick",
+        id: "10",
+        capacity: 1500,
+        efficiency: 0.25
       },
       {
-        id: "c7b3d8e0-5e0b-4b0f-8b3a-3b9f4b3d3b3e",
-        firstName: "Kar",
-        lastName: "Marx",
+        id: "20",
+        capacity: 2000,
+        efficiency: 0.33
       },
     ]);
   }),

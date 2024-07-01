@@ -15,5 +15,8 @@ export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-co
 ]);
 
 
-export const WcButton = /*@__PURE__*/ defineContainer<JSX.WcButton>('wc-button', undefined);
+export const WebButton = /*@__PURE__*/ defineContainer<JSX.WebButton>('web-button', undefined);
+
+
+export const WebMfe = /*@__PURE__*/ defineContainer<JSX.WebMfe>('web-mfe', undefined);
 

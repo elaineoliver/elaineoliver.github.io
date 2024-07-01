@@ -20,7 +20,9 @@ export namespace Components {
          */
         "middle": string;
     }
-    interface WcButton {
+    interface WebButton {
+    }
+    interface WebMfe {
     }
 }
 declare global {
@@ -30,15 +32,22 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
-    interface HTMLWcButtonElement extends Components.WcButton, HTMLStencilElement {
+    interface HTMLWebButtonElement extends Components.WebButton, HTMLStencilElement {
     }
-    var HTMLWcButtonElement: {
-        prototype: HTMLWcButtonElement;
-        new (): HTMLWcButtonElement;
+    var HTMLWebButtonElement: {
+        prototype: HTMLWebButtonElement;
+        new (): HTMLWebButtonElement;
+    };
+    interface HTMLWebMfeElement extends Components.WebMfe, HTMLStencilElement {
+    }
+    var HTMLWebMfeElement: {
+        prototype: HTMLWebMfeElement;
+        new (): HTMLWebMfeElement;
     };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
-        "wc-button": HTMLWcButtonElement;
+        "web-button": HTMLWebButtonElement;
+        "web-mfe": HTMLWebMfeElement;
     }
 }
 declare namespace LocalJSX {
@@ -56,11 +65,14 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
-    interface WcButton {
+    interface WebButton {
+    }
+    interface WebMfe {
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
-        "wc-button": WcButton;
+        "web-button": WebButton;
+        "web-mfe": WebMfe;
     }
 }
 export { LocalJSX as JSX };
@@ -68,7 +80,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "wc-button": LocalJSX.WcButton & JSXBase.HTMLAttributes<HTMLWcButtonElement>;
+            "web-button": LocalJSX.WebButton & JSXBase.HTMLAttributes<HTMLWebButtonElement>;
+            "web-mfe": LocalJSX.WebMfe & JSXBase.HTMLAttributes<HTMLWebMfeElement>;
         }
     }
 }
