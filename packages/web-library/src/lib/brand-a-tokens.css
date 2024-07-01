@@ -35,7 +35,7 @@
 
 /* Colors */
 
-:root {
+:root, .light-mode {
   --brand-color-on-surface:           black;
   --brand-color-on-surface-variant:   grey;
   --brand-color-surface:              white;
@@ -45,7 +45,21 @@
 
   --brand-color-on-secondary:         #006131;
   --brand-color-secondary:            #97ff03;
+}
 
-  --brand-color-on-tertiary:           #006131;
-  --brand-color-tertiary:             white;
+.dark-mode {
+  --brand-color-surface:           black;
+  --brand-color-on-surface:              white;
+
+  --brand-color-primary:           white;
+  --brand-color-on-primary:              #006131;
+
+  --brand-color-secondary:         #006131;
+  --brand-color-on-secondary:            #97ff03;
+}
+
+.light-mode,
+.dark-mode {
+  background-color: var(--brand-color-surface);
+  color: var(--brand-color-on-surface);
 }

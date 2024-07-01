@@ -6,14 +6,14 @@ import { Component, Host, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class WebButton {
-  @Prop() variant?: "primary" | "secondary" | "tertiary" = "primary"
+  @Prop() variant?: "primary" | "on-primary" | "secondary" | "on-secondary" = "primary"
 
-  @Prop() options?: "outline" = undefined
+  @Prop() options?: "solid" | "outline" = "solid"
 
   render() {
     return (
       <Host>
-        <button class={`button ${this.variant} ${this.options ? this.options : ""}`}>
+        <button class={`button ${this.variant} ${this.options}`}>
           <span class="label">
             <slot>Test me</slot>
           </span>

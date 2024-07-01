@@ -35,7 +35,7 @@
 
 /* Colors */
 
-:root {
+:root, .light-mode {
   --brand-color-on-surface:           black;
   --brand-color-surface:              rgb(247, 240, 235);
 
@@ -44,7 +44,21 @@
 
   --brand-color-on-secondary:         white;
   --brand-color-secondary:            rgb(130, 30, 125);
+}
 
-  --brand-color-on-teriary:           currentColor;
-  --brand-color-tertiary:             none;
+.dark-mode {
+  --brand-color-surface:           black;
+  --brand-color-on-surface:              rgb(247, 240, 235);
+
+  --brand-color-primary:           white;
+  --brand-color-on-primary:              rgb(0, 121, 163);
+
+  --brand-color-secondary:         white;
+  --brand-color-on-secondary:            rgb(130, 30, 125);
+}
+
+.light-mode,
+.dark-mode {
+  background-color: var(--brand-color-surface);
+  color: var(--brand-color-on-surface);
 }

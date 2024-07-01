@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type                                     | Default     |
-| --------- | --------- | ----------- | ---------------------------------------- | ----------- |
-| `options` | `options` |             | `"outline"`                              | `undefined` |
-| `variant` | `variant` |             | `"primary" \| "secondary" \| "tertiary"` | `"primary"` |
+| Property  | Attribute | Description | Type                                                         | Default     |
+| --------- | --------- | ----------- | ------------------------------------------------------------ | ----------- |
+| `options` | `options` |             | `"outline" \| "solid"`                                       | `"solid"`   |
+| `variant` | `variant` |             | `"on-primary" \| "on-secondary" \| "primary" \| "secondary"` | `"primary"` |
 
 
 ## Dependencies

@@ -6,13 +6,10 @@
 
 .button {
   // Init vars
+  --_outline-color: currentColor;
+  --_border-color: transparent;
   --_background-color: none;
-  --_font-fs-lh: var(--brand-fs-m)/var(--brand-lh);
-  --_font-family: var(--brand-font-family);
-  --_font: normal 400 var(--_font-fs-lh, 1em/1lh) var(--_font-family);
-  --_padding: 0;
-  --_text-color: inherit;
-  --_underline-color: transparent;
+  --_text-color: currentColor;
 
   cursor: pointer;
   appearance: none;
@@ -20,61 +17,107 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
-  padding: var(--_padding, 0);
-  border: 1px solid var(--_border-color, transparent);
-  border-radius: 0 0.75em 0.75em 0.75em;
-  box-shadow: none;
-  font: var(--_font);
-  white-space: nowrap;
-  text-align: center;
-  text-decoration: none;
-  background: var(--_background-color);
-  color: var(--_text-color);
-  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s, color 0.2s, outline 0.2s;
-}
-
-/* Block variants */
-
-.primary,
-.secondary,
-.tertiary {
   width: fit-content;
   height: fit-content;
   min-width: calc(1lh + 1.25rem);
   min-height: calc(1lh + 1.25rem);
   padding: 0 calc(1lh);
+  border: 1px solid var(--_border-color);
+  border-radius: 0 0.75em 0.75em 0.75em;
+  font: var(--brand-font-m);
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  background: var(--_background-color);
+  color: var(--_text-color);
+  transition: filter 0.2s linear;
 }
 
 .primary {
-  --_background-color: var(--brand-color-primary);
-  --_text-color: var(--brand-color-on-primary);
+  &.solid {
+    --_background-color: var(--brand-color-primary);
+    --_text-color: var(--brand-color-on-primary);
+    --_outline-color: var(--brand-color-primary);
+  }
 
   &.outlined {
     --_background-color: var(--brand-color-on-primary);
     --_text-color: var(--brand-color-primary);
+    --_border-color: currentColor;
+    --_outline-color: var(--brand-color-primary);
+  }
+}
+
+.on-primary {
+  &.solid {
+    --_background-color: var(--brand-color-on-primary);
+    --_text-color: var(--brand-color-primary);
+    --_outline-color: var(--brand-color-on-primary);
+  }
+
+  &.outlined {
+    --_background-color: var(--brand-color-primary);
+    --_text-color: var(--brand-color-on-primary);
+    --_border-color: currentColor;
+    --_outline-color: currentColor;
   }
 }
 
 .secondary {
-  --_background-color: var(--brand-color-secondary);
-  --_text-color: var(--brand-color-on-secondary);
+  &.solid {
+    --_background-color: var(--brand-color-secondary);
+    --_text-color: var(--brand-color-on-secondary);
+    --_outline-color: var(--brand-color-secondary);
+  }
 
   &.outlined {
     --_background-color: var(--brand-color-on-secondary);
     --_text-color: var(--brand-color-secondary);
+    --_border-color: currentColor;
+    --_outline-color: var(--brand-color-secondary);
   }
 }
 
-.tertiary {
-  --_background-color: var(--brand-color-tertiary);
-  --_text-color: var(--brand-color-on-tertiary);
+.on-secondary {
+  &.solid {
+    --_background-color: var(--brand-color-on-secondary);
+    --_text-color: var(--brand-color-secondary);
+    --_outline-color: var(--brand-color-on-secondary);
+  }
 
   &.outlined {
+    --_background-color: var(--brand-color-secondary);
+    --_text-color: var(--brand-color-on-secondary);
+    --_border-color: currentColor;
+    --_outline-color: currentColor;
+  }
+}
+
+.on-tertiary {
+  &.solid {
     --_background-color: var(--brand-color-on-tertiary);
     --_text-color: var(--brand-color-tertiary);
   }
+
+  &.outlined {
+    --_background-color: var(--brand-color-tertiary);
+    --_text-color: var(--brand-color-on-tertiary);
+    --_border-color: currentColor;
+  }
 }
 
-.outlined {
-  --_border-color: currentColor;
+.button {
+  &:hover {
+    filter: brightness(125%);
+  }
+  &:focus {
+    outline: 2px solid var(--_outline-color);
+    outline-offset: 2px;
+  }
+  &:hover:focus {
+    outline: none;
+  }
+  &:active {
+    filter: brightness(100%);
+  }
 }

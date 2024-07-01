@@ -21,21 +21,23 @@ export class WebMfe {
   render() {
     return (
       <Host>
-        <ul>
+        <div>
           {this.windmillData?.map(windmill => {
             return (
-              <li>
-                <h2>
-                  Windmill {windmill.id}
-                </h2>
-                <p>
-                  Estimated output: {365 * 24 * windmill.capacity * windmill.efficiency} kilowatt hours per year
-                </p>
-                <web-button>More details</web-button>
-              </li>
+              <web-box variant={windmill.id === "10" ? "primary" : "secondary"}>
+                <section>
+                  <h3>
+                    Windmill {windmill.id}
+                  </h3>
+                  <p>
+                    Estimated output: {365 * 24 * windmill.capacity * windmill.efficiency} kilowatt hours per year
+                  </p>
+                  <web-button variant={windmill.id === "10" ? "on-primary" : "on-secondary"}>More details</web-button>
+                </section>
+              </web-box>
             )
           })}
-        </ul>
+        </div>
       </Host>
     );
   }

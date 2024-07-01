@@ -24,8 +24,8 @@ export namespace Components {
         "variant"?: "primary" | "secondary" | "tertiary";
     }
     interface WebButton {
-        "options"?: "outline";
-        "variant"?: "primary" | "secondary" | "tertiary";
+        "options"?: "solid" | "outline";
+        "variant"?: "primary" | "on-primary" | "secondary" | "on-secondary";
     }
     interface WebMfe {
     }
@@ -81,8 +81,8 @@ declare namespace LocalJSX {
         "variant"?: "primary" | "secondary" | "tertiary";
     }
     interface WebButton {
-        "options"?: "outline";
-        "variant"?: "primary" | "secondary" | "tertiary";
+        "options"?: "solid" | "outline";
+        "variant"?: "primary" | "on-primary" | "secondary" | "on-secondary";
     }
     interface WebMfe {
     }
