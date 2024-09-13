@@ -1,9 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="en">
   <head>
-    <title>Elaine Oliver</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wdth,wght@0,6..12,75,200..1000;1,6..12,75,200..1000&display=swap" rel="stylesheet">
+    <link href="packages/web-library/www/global/brand-b-tokens.css" rel="stylesheet">
+    <script type="module" src="packages/web-library/loader/cdn.js"></script>
   </head>
   <body>
-    <h1>Elaine Oliver</h1>
+    <web-box>
+      <div style="display: flex; gap: 1em;">
+        <web-button variant="on-primary">On Primary</web-button>
+        <web-button variant="on-primary" options="outlined">On Primary Outlined</web-button>
+      </div>
+    </web-box>
+    <web-box variant="secondary">
+      <div style="display: flex; gap: 1em;">
+        <web-button variant="on-secondary">On Secondary</web-button>
+        <web-button variant="on-secondary" options="outlined">On Secondary Outlined</web-button>
+      </div>
+    </web-box>
+    <web-box variant="tertiary">
+      <div style="display: flex; gap: 1em;">
+        <web-button variant="primary">Primary</web-button>
+        <web-button variant="primary" options="outlined">Primary Outlined</web-button>
+        <web-button variant="secondary">Secondary</web-button>
+        <web-button variant="secondary" options="outlined">Secondary Outlined</web-button>
+      </div>
+    </web-box>
   </body>
 </html>
