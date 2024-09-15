@@ -1,5 +1,0 @@
-import type { JSX } from 'web-library';
-export declare const MyComponent: import("react").ForwardRefExoticComponent<JSX.MyComponent & Omit<import("react").HTMLAttributes<HTMLMyComponentElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLMyComponentElement>>;
-export declare const WebBox: import("react").ForwardRefExoticComponent<JSX.WebBox & Omit<import("react").HTMLAttributes<HTMLWebBoxElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLWebBoxElement>>;
-export declare const WebButton: import("react").ForwardRefExoticComponent<JSX.WebButton & Omit<import("react").HTMLAttributes<HTMLWebButtonElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLWebButtonElement>>;
-export declare const WebMfe: import("react").ForwardRefExoticComponent<JSX.WebMfe & Omit<import("react").HTMLAttributes<HTMLWebMfeElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLWebMfeElement>>;

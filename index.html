@@ -1,36 +1,17 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSC Component Library</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wdth,wght@0,6..12,75,200..1000;1,6..12,75,200..1000&display=swap" rel="stylesheet">
-    <link href="packages/web-library/www/global/brand-b-tokens.css" rel="stylesheet">
-    <script type="module" src="packages/web-library/loader/cdn.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script type="module" src="./msc-button.js"></script>
+    <link rel="stylesheet" href="./msc-brand1-tokens.css" />
   </head>
   <body>
-    <web-box>
-      <div style="display: flex; gap: 1em;">
-        <web-button variant="on-primary">On Primary</web-button>
-        <web-button variant="on-primary" options="outlined">On Primary Outlined</web-button>
-      </div>
-    </web-box>
-    <web-box variant="secondary">
-      <div style="display: flex; gap: 1em;">
-        <web-button variant="on-secondary">On Secondary</web-button>
-        <web-button variant="on-secondary" options="outlined">On Secondary Outlined</web-button>
-      </div>
-    </web-box>
-    <web-box variant="tertiary">
-      <div style="display: flex; gap: 1em;">
-        <web-button variant="primary">Primary</web-button>
-        <web-button variant="primary" options="outlined">Primary Outlined</web-button>
-        <web-button variant="secondary">Secondary</web-button>
-        <web-button variant="secondary" options="outlined">Secondary Outlined</web-button>
-      </div>
-    </web-box>
+    <h1>MSC Component Library</h1>
+    <msc-button>Hi!</msc-button>
   </body>
 </html>

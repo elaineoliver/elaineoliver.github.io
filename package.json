@@ -1,12 +1,35 @@
 {
-  "name": "root",
+  "name": "elaineoliver.github.io",
   "private": true,
-  "workspaces": [
-    "packages/*"
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "stylelint": "npx stylelint \"**/*.{css,ts}\""
+  },
+  "exports": {
+    "./msc-button.js": "./dist/msc-button/msc-button.js",
+    "./msc-brand1-tokens.css": "./dist/assets/msc-brand1-tokens.css"
+  },
+  "files": [
+    "dist"
   ],
+  "dependencies": {
+    "lit": "^3.2.0"
+  },
   "devDependencies": {
-    "@types/node": "^20.14.9",
-    "lerna": "^8.1.5",
-    "typescript": "^5.5.2"
+    "@eslint/js": "^9.10.0",
+    "eslint": "^9.10.0",
+    "eslint-plugin-lit": "^1.15.0",
+    "globals": "^15.9.0",
+    "postcss-lit": "^1.1.1",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.5.0",
+    "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.2.1"
   }
 }
