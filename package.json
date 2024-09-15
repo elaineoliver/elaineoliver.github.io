@@ -15,6 +15,7 @@
   "devDependencies": {
     "@eslint/js": "^9.10.0",
     "eslint": "^9.10.0",
+    "eslint-plugin-lit": "^1.15.0",
     "globals": "^15.9.0",
     "postcss-lit": "^1.1.1",
     "stylelint": "^16.9.0",
