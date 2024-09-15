@@ -9,6 +9,13 @@
     "preview": "vite preview",
     "stylelint": "npx stylelint \"**/*.{css,ts}\""
   },
+  "exports": {
+    "./msc-button": "./dist/msc-button/msc-button.js",
+    "./msc-brand1-tokens.css": "./dist/msc-brand1/msc-brand1-tokens.css"
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "lit": "^3.2.0"
   },
@@ -22,6 +29,7 @@
     "stylelint-config-standard": "^36.0.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.5.0",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.2.1"
   }
 }
