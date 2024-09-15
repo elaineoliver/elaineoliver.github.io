@@ -17,7 +17,7 @@ export default defineConfig({
     lib: {
       entry: {
         "msc-button": "./src/msc-button/msc-button.ts",
-        "msc-css": "./src/msc-brand1/msc-brand1-tokens.css",
+        "msc-brand1-tokens.css": "./src/msc-brand1/msc-brand1-tokens.css",
       },
       formats: ['es'],
       name: 'msc-component-library',

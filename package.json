@@ -9,10 +9,6 @@
     "preview": "vite preview",
     "stylelint": "npx stylelint \"**/*.{css,ts}\""
   },
-  "exports": {
-    "./msc-button": "./dist/msc-button/msc-button.js",
-    "./msc-brand1-tokens.css": "./dist/msc-brand1/msc-brand1-tokens.css"
-  },
   "files": [
     "dist"
   ],
