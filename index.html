@@ -9,9 +9,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <script type="module" src="./dist/msc-button/msc-button.js"></script>
     <link rel="stylesheet" href="./dist/assets/msc-brand1-tokens.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>MSC Component Library</h1>
-    <msc-button>Hi!</msc-button>
+    <div class="tile">
+      <h1>MSC Component Library</h1>
+    </div>
+    <div class="msc-light-mode tile">
+      <h2>Light mode</h2>
+      <p>
+        <msc-button>Primary button</msc-button>
+      </p>
+      <p>
+        <msc-button variant="secondary">Secondary button</msc-button>
+      </p>
+    </div>
+    <div class="msc-dark-mode tile">
+      <h2>Dark mode</h2>
+      <p>
+        <msc-button>Primary button</msc-button>
+      </p>
+      <p>
+        <msc-button variant="secondary">Secondary button</msc-button>
+      </p>
+    </div>
   </body>
 </html>

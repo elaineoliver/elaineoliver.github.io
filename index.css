@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  background: var(--msc-color-surface);
+  color: var(--msc-color-on-surface);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:is(h1, h2, p) + :where(h1, h2, p) {
+  margin-top: 1rem;
+}
+
+h1 {
+  font: var(--msc-font-xxl);
+  font-style: italic;
+  color: var(--msc-color-h1);
+}
+
+h2 {
+  font: var(--msc-font-xl);
+  font-style: italic;
+  color: var(--msc-color-h2);
+}
+
+.tile {
+  padding: 2lh 1lh;
+}
+
+.tile.msc-light-mode {
+  border: 1px solid lightgray;
+}
