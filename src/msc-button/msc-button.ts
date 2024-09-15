@@ -9,6 +9,8 @@ export class MSCButton extends LitElement {
    */
   @property({ type: Number }) variant?: 'primary' | 'secondary' | 'tertiary' = 'primary';
 
+  @property({ type: String }) camelCaseName = "";
+
   render() {
     return html`
       <button class=${this.variant}>
