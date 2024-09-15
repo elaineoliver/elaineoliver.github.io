@@ -5,7 +5,7 @@
 :root {
   --msc-font-style: normal;
   --msc-font-weight: normal;
-  --msc-font-family: "Lato", "Arial", sans-serif;
+  --msc-font-family: "Lato" "Arial" sans-serif;
 
   --msc-font-xxs: var(--msc-font-style) var(--msc-font-weight) calc(11/16 * 1rem)/calc(15/16 * 1rem) var(--msc-font-family); 
   --msc-font-xs:  var(--msc-font-style) var(--msc-font-weight) calc(14/16 * 1rem)/calc(21/16 * 1rem) var(--msc-font-family);
@@ -20,28 +20,35 @@
 
 :root,
 .msc-light-mode {
-  --msc-color-surface:            white;
-  --msc-color-on-surface:         black;
-  --msc-color-on-surface-variant: hsl(219deg 2% 38%);
-
-  --msc-color-brand-01: hsl(24deg 100% 50%);
-  --msc-color-brand-01-low: #ff4800;
-  --msc-color-on-brand-01: white;
+  --sfc-heading-1-color-text: hsl(219deg 100% 50%);
+  --sfc-heading-2-color-text: hsl(219deg 100% 50%);
+  --sfc-heading-3-color-text: hsl(219deg 100% 50%);
+  --sfc-heading-4-color-text: hsl(235deg 100% 33%);
+  --sfc-heading-5-color-text: hsl(235deg 100% 33%);
+  --sfc-heading-6-color-text: hsl(219deg 2% 38%);
+  --sfc-paragraph-color-text: hsl(219deg 2% 13%);
   
-  --msc-color-brand-01-container: #ffefe5;
-  --msc-color-on-brand-01-container: black;
-
-  --msc-color-brand-02: hsl(240deg 100% 30%);
-  --msc-color-brand-02-low: #19197c;
-  --msc-color-brand-02-lowest: #141240;
-  --msc-color-on-brand-02: white;
-
-  --msc-color-brand-02-container: #d3edf4;
-  --msc-color-on-brand-02-container: black;
+  --sfc-link-color-text: hsl(235deg 100% 33%);
+  --sfc-link-color-text-hover: hsl(219deg 100% 50%);
+  --sfc-link-color-text-focus: hsl(219deg 100% 50%);
+  --sfc-link-color-text-active: hsl(219deg 100% 50%);
+  --sfc-link-color-text-visited: hsl(221deg 34% 48%);
 }
 
 .msc-dark-mode {
+  --sfc-heading-1-color-text: hsl(219deg 100% 64%);
+  --sfc-heading-2-color-text: hsl(219deg 100% 64%);
+  --sfc-heading-3-color-text: hsl(219deg 100% 64%);
+  --sfc-heading-4-color-text: hsl(219deg 17% 93%);
+  --sfc-heading-5-color-text: hsl(219deg 17% 93%);
+  --sfc-heading-6-color-text: hsl(219deg 17% 74%);
+  --sfc-paragraph-color-text: hsl(219deg 17% 88%);
 
+  --sfc-link-color-text: hsl(208deg 100% 50%);
+  --sfc-link-color-text-hover: hsl(219deg 17% 88%);
+  --sfc-link-color-text-focus: hsl(219deg 17% 88%);
+  --sfc-link-color-text-active: hsl(219deg 17% 88%);
+  --sfc-link-color-text-visited: hsl(220deg 32% 64%);
 }
 
 .msc-light-mode,
