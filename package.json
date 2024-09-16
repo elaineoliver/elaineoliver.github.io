@@ -29,7 +29,6 @@
     "@types/node": "^22.5.5",
     "eslint": "^9.10.0",
     "eslint-plugin-lit": "^1.15.0",
-    "eslint-plugin-lit-a11y": "^4.1.4",
     "globals": "^15.9.0",
     "postcss-lit": "^1.1.1",
     "prettier": "3.3.3",
