@@ -7,14 +7,13 @@ test.describe("msc-button", () => {
   });
 
   test(`Emits a button`, async ({ page }) => {
-    await page.setContent(/* html */`
-    <msc-button>
-      Test button
-    </msc-button>
-  `);
-
-    const button = page.getByRole("button", { name: "Test button" });
+    const button = page.getByRole("button", { name: "Primary button" });
 
     expect(button).toBeDefined();
+  })
+
+  test(`Looks fabulous`, async ({ page }) => {
+    const screenshot = await page.screenshot();
+    expect(screenshot).toMatchSnapshot({ maxDiffPixels: 10 });
   })
 })
