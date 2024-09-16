@@ -3,6 +3,13 @@ import { customElement, property } from 'lit/decorators.js'
 
 @customElement('msc-button')
 export class MSCButton extends LitElement {
+  static readonly formAssociated = true;
+
+  static override shadowRootOptions: ShadowRootInit = {
+    mode: 'open',
+    delegatesFocus: true,
+  };
+
   /**
    * Sets the overall style of button.
    * There are no restrictions on the style of the button based on the element it generates.

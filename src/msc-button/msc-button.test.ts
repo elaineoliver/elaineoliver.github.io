@@ -7,9 +7,9 @@ test.describe("msc-button", () => {
   });
 
   test(`Emits a button`, async ({ page }) => {
-    const button = page.getByRole("button", { name: "Primary button" });
-
-    expect(button).toBeDefined();
+    const button = page.getByRole("button", { name: "Primary button dark" });
+    await button.focus()
+    await expect(button).toBeFocused();
   })
 
   test(`Looks fabulous`, async ({ page }) => {
