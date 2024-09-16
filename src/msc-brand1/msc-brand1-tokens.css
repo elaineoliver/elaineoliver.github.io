@@ -6,13 +6,20 @@
   --msc-font-style: normal;
   --msc-font-weight: normal;
   --msc-font-family: "Lato", "Arial", sans-serif;
-  --msc-font-xxs: var(--msc-font-style) var(--msc-font-weight) calc(11/16 * 1rem)/calc(15/16 * 1rem) var(--msc-font-family); 
-  --msc-font-xs:  var(--msc-font-style) var(--msc-font-weight) calc(14/16 * 1rem)/calc(21/16 * 1rem) var(--msc-font-family);
-  --msc-font-sm:  var(--msc-font-style) var(--msc-font-weight) calc(16/16 * 1rem)/calc(24/16 * 1rem) var(--msc-font-family);
-  --msc-font-md:  var(--msc-font-style) var(--msc-font-weight) calc(18/16 * 1rem)/calc(28/16 * 1rem) var(--msc-font-family);
-  --msc-font-lg:  var(--msc-font-style) var(--msc-font-weight) calc(21/16 * 1rem)/calc(32/16 * 1rem) var(--msc-font-family);
-  --msc-font-xl:  var(--msc-font-style) var(--msc-font-weight) calc(28/16 * 1rem)/calc(40/16 * 1rem) var(--msc-font-family);
-  --msc-font-xxl: var(--msc-font-style) var(--msc-font-weight) calc(38/16 * 1rem)/calc(48/16 * 1rem) var(--msc-font-family);
+  --msc-font-xxs: var(--msc-font-style) var(--msc-font-weight)
+    calc(11 / 16 * 1rem) / calc(15 / 16 * 1rem) var(--msc-font-family);
+  --msc-font-xs: var(--msc-font-style) var(--msc-font-weight)
+    calc(14 / 16 * 1rem) / calc(21 / 16 * 1rem) var(--msc-font-family);
+  --msc-font-sm: var(--msc-font-style) var(--msc-font-weight)
+    calc(16 / 16 * 1rem) / calc(24 / 16 * 1rem) var(--msc-font-family);
+  --msc-font-md: var(--msc-font-style) var(--msc-font-weight)
+    calc(18 / 16 * 1rem) / calc(28 / 16 * 1rem) var(--msc-font-family);
+  --msc-font-lg: var(--msc-font-style) var(--msc-font-weight)
+    calc(21 / 16 * 1rem) / calc(32 / 16 * 1rem) var(--msc-font-family);
+  --msc-font-xl: var(--msc-font-style) var(--msc-font-weight)
+    calc(28 / 16 * 1rem) / calc(40 / 16 * 1rem) var(--msc-font-family);
+  --msc-font-xxl: var(--msc-font-style) var(--msc-font-weight)
+    calc(38 / 16 * 1rem) / calc(48 / 16 * 1rem) var(--msc-font-family);
 }
 
 /* Colors */
