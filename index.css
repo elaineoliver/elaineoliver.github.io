@@ -4,7 +4,9 @@ body {
   color: var(--msc-color-on-surface);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
