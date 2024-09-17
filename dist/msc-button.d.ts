@@ -1,17 +1,19 @@
 import { LitElement } from 'lit';
 export declare class MSCButton extends LitElement {
+    #private;
+    constructor();
     static readonly formAssociated = true;
     static shadowRootOptions: ShadowRootInit;
-    /**
-     * Sets the overall style of button.
-     * There are no restrictions on the style of the button based on the element it generates.
-     */
-    variant?: 'primary' | 'secondary';
+    type?: "button" | "reset" | "submit";
+    variant?: "primary" | "secondary";
+    private getForm;
+    componentDidLoad(): void;
     render(): import('lit-html').TemplateResult<1>;
+    private doFormStuff;
     static styles: import('lit').CSSResult;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'msc-button': MSCButton;
+        "msc-button": MSCButton;
     }
 }

@@ -33,5 +33,19 @@
         <msc-button variant="secondary">Secondary button dark</msc-button>
       </p>
     </div>
+    <form id="form" class="tile">
+      <h2>Demo form</h2>
+      <msc-button type="submit">Submit</msc-button>
+      <p id="form-feedback" aria-live="polite"></p>
+    </form>
+    <script>
+      const form = document.getElementById("form")
+      const formFeedback = document.getElementById("form-feedback")
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault()
+        formFeedback.append("The form was submitted")
+      })
+    </script>
   </body>
 </html>
