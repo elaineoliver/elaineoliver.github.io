@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font: var(--msc-font-md);
   background: var(--msc-color-surface);
   color: var(--msc-color-on-surface);
 }
@@ -14,7 +15,8 @@ body {
   margin: 0;
 }
 
-:is(h1, h2, p) + :where(h1, h2, p) {
+:is(h1, h2, p) + *,
+* + :is(h1, h2, p) {
   margin-top: 1rem;
 }
 
@@ -31,7 +33,7 @@ h2 {
 }
 
 .tile {
-  padding: 2lh 1lh;
+  padding: 1lh;
 }
 
 .tile.msc-light-mode {

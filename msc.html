@@ -33,5 +33,17 @@
         <msc-button variant="secondary">Secondary button dark</msc-button>
       </p>
     </div>
+    <form id="form" class="tile">
+      <h2>Demo form</h2>
+      <p>This form displays an alert on submit</p>
+      <msc-button type="submit">Display an alert!</msc-button>
+    </form>
+    <script>
+      const form = document.getElementById("form")
+
+      form.addEventListener("submit", () => {
+        alert("The form was submitted!")
+      })
+    </script>
   </body>
 </html>
