@@ -58,6 +58,36 @@ Once you have set up a style dictionary, pass CSS tokens to the components using
 
 Typically the custom properties are defined in a global stylesheet hosted by the application using the components. Each brand has a separate stylesheet and each stylesheet defines all the themes supported by the brand. For example:
 
+```css
+/* A global CSS file for one brand with two themes, light and dark. Switching themes is just matter of switching classes on an html element. */
+
+:root,
+.msc-light-mode {
+  --msc-color-h1: hsl(219deg 100% 50%);
+  --msc-color-h2: hsl(219deg 100% 50%);
+  --msc-color-h3: hsl(219deg 100% 50%);
+ …
+}
+
+.msc-dark-mode {
+  --msc-color-h1: hsl(219deg 100% 64%);
+  --msc-color-h2: hsl(219deg 100% 64%);
+  --msc-color-h3: hsl(219deg 100% 64%);
+ …
+}
+
+/* A component CSS file that consumes one of the custom properties in the global CSS file. The component does not need to be rebuilt when the theme changes. */
+
+:host {
+  display: block;
+ …
+}
+
+h2 {
+  color: var(--msc-color-h2);
+}
+```
+
 ### Accessibility
 
 Accessible UI components are the foundation of any accessible web application. Components must be built to be accessible from the start. Building components and adding accessibility “features” later will only lead to frustration and unneeded work. Ideally your team will have some basic accessibility training and know their way around the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/). It’s also wise to have an accessibility specialist on hand who can highlight accessibility issues and deal with the hardest problems. In addition, the following practices are recommended to ensure that your components remain accessible during the lifetime of your component library:
