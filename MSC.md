@@ -102,6 +102,24 @@ Accessible UI components are the foundation of any accessible web application. C
 
 For example, web components have some unfortunate quirks when it comes to ARIA attributes. (There is a [mature proposal](https://github.com/WICG/webcomponents/blob/gh-pages/proposals/reference-target-explainer.md) on the table to address the issue but it is not part of the standard yet.) Adding the “aria-expanded” attribute to a web component that emits a button is valid HTML, but the browser will not interpret it correctly and the end user will not receive the information. Instead, component developers can create a custom attribute “expanded”, which will work correctly, and program a warning for consumers who try to use the aria attribute instead. For example:
 
+```html
+<!-- <msc-button> used incorrectly -->
+
+<msc-button aria-expanded="true">
+  Show more
+</msc-button>
+
+<!-- Console warning -->
+
+Warning: Attribute "aria-expanded" is not supported on <msc-button> and may cause accessibility problems. Please use the "expanded" attribute instead.
+
+<!-- <msc-button> used correctly -->
+
+<msc-button expanded="true">
+  Show more
+</msc-button>
+```
+
 ### Scalability and performance
 
 Web components are generally faster and more scalable than components written in a framework such as React or Vue, but the following approaches are recommended to keep your components as fast and scalable as possible: 
@@ -111,6 +129,38 @@ Web components are generally faster and more scalable than components written in
 * Make sure components have as few external dependencies as possible. If it looks like a plugin must be installed then discuss it with the team first.
 
 * Make sure components have as few dependencies on each other as possible. One component that imports two components that each import two more components and so on will quickly turn into a slow and unmanageable mess. A better approach, called composition, is to add “slots” to components so other components can be nested inside. For example:
+
+```html
+<!-- A bloated button component that includes an icon component, probably multiple icon files and a notification component -->
+
+<msc-button
+  id="shopping-cart"
+  icon-name="shopping-cart"
+  icon-color="primary"
+  icon-size="large"
+  icon-position="end"
+  notification-short-value="10"
+  notification-long-value="There are 10 items in your shopping cart"
+>
+  Shopping cart
+</msc-button>
+
+<!-- A button component, an icon component and a notification component “composed” to achieve the desired result -->   
+
+<msc-notification
+  short-value="10"
+  long-value="There are 10 items in your shopping cart"
+>
+  <msc-button id="shopping-cart">
+    Shopping cart
+    <msc-icon-shopping-cart 
+      slot="icon-end"
+      color="primary"
+      size="large" 
+    />
+  </msc-button>
+</msc-notification>
+```
 
 * Make sure consumers of your components can import one component at a time without loading the rest of the library in the background. Configure [separate entry points](https://vitejs.dev/guide/build.html#library-mode) for each component using Vite and [define exports](https://nodejs.org/api/packages.html#subpath-exports) in package.json.
 
