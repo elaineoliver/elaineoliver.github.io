@@ -3,6 +3,13 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("msc-button")
 export class MSCButton extends LitElement {
+  #internals;
+  constructor() {
+    super();
+    this.#internals = this.attachInternals();
+    this.addEventListener('click', this.doFormStuff.bind(this));
+  }
+
   static readonly formAssociated = true;
 
   static override shadowRootOptions: ShadowRootInit = {
@@ -10,15 +17,21 @@ export class MSCButton extends LitElement {
     delegatesFocus: true,
   };
 
-  /**
-   * Sets the overall style of button.
-   * There are no restrictions on the style of the button based on the element it generates.
-   */
+  @property({ type: String }) type?: "button" | "reset" | "submit" = "button";
+
   @property({ type: String }) variant?: "primary" | "secondary";
+
+  private getForm() {
+    return this.#internals.form
+  }
+
+  componentDidLoad() {
+    this.getForm();
+  }
 
   render() {
     return html`
-      <button class=${this.variant || "primary"}>
+      <button class=${this.variant || "primary"} type=${this.type || "button"}>
         <slot name="icon-before"></slot>
         <span class="label">
           <slot></slot>
@@ -27,6 +40,20 @@ export class MSCButton extends LitElement {
         <slot name="icon-only"></slot>
       </button>
     `;
+  }
+
+  private doFormStuff() {
+    if (this.type === 'submit' || this.type === 'reset') {
+      if (this.#internals.form !== null) {
+        if (this.type === 'submit') {
+          this.#internals.form.requestSubmit();
+        } else if (this.type === 'reset') {
+          this.#internals.form.reset();
+        }
+      } else {
+        new Error(`MSC Button is type of "${this.type}", but a form can not be found.`);
+      }
+    }
   }
 
   static styles = css`
@@ -64,7 +91,7 @@ export class MSCButton extends LitElement {
     .secondary {
       padding: 0 0.5lh;
       border-radius: 4px;
-      line-height: 2.5lh;
+      line-height: 2lh;
     }
 
     .primary {
