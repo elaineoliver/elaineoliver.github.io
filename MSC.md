@@ -1,12 +1,12 @@
-# *Proposal MSC Design System*
+# Proposal MSC Design System
 
 Congratulations on your decision to build a design system for your suite of frontend applications\! A design system will help ensure that your applications are consistent with your brand, accessible and fast. Building a design system is not without its challenges however. The following recommendations will help your team be as successful as possible. 
 
 A simple proof-of-concept illustrating some of the recommendations in this document is available in this reponsitory.
 
-## *Documenting designs and creating a style library*
+## Documenting designs and creating a style library
 
-# Your team has already chosen [Figma](https://www.figma.com/) to document your design decisions and facilitate collaboration between designers and developers. To get the most from your design documentation:
+Your team has already chosen [Figma](https://www.figma.com/) to document your design decisions and facilitate collaboration between designers and developers. To get the most from your design documentation:
 
 * Make sure everyone on your team has access to Figma, not just the designers.
 
@@ -16,7 +16,7 @@ A simple proof-of-concept illustrating some of the recommendations in this docum
 
 * Use Figma’s [semantic versioning](https://www.figma.com/community/plugin/1046106377087666849/semantic-versioning) feature so developers will know which designs are old, which are ready to be developed, and which are still in the concept phase.
 
-## *Developing UI components in code*
+## Developing UI components in code
 
 Your team has already decided to develop UI components based on browser native [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components). Web components will ensure that your UI components work now and in the future, with any framework or without any framework at all. Your team has also decided to use the [Lit.dev](https://lit.dev/) web component library to speed up development and give your team lots of flexibility in setting up your project. In addition you’ll want to use the following tools to make sure your code is as robust as possible:
 
@@ -30,7 +30,7 @@ Your team has already decided to develop UI components based on browser native [
 
 * (Optional) If you wish to write the CSS for your components in separate files using [Sass](https://sass-lang.com/), just compile the Sass to CSS and then inject it into the “css” function of the relevant Lit component.
 
-## *Documenting and testing*
+## Documenting and testing
 
 Once you have built some components you’ll want to document them and test them thoroughly. 
 
@@ -38,7 +38,7 @@ Once you have built some components you’ll want to document them and test them
 
 * Testing includes manual testing by your team and automated testing using a test runner. Many test runners are available, but [Playwright](https://playwright.dev/) is one of the best for testing web components. Playwright can automatically find elements in the Shadow DOM, detect basic accessibility problems, compare screenshots, and run tests in different browsers and platforms. To get the most from your tests you’ll want to do both functional and visual testing of components in isolation and in combination with each other. You can even test your online documentation\!
 
-## *Building and deploying*
+## Building and deploying
 
 Your component library is a product and should be treated as such. In addition to tried and true development practices such as change management and code reviews, your team will want to set up a robust deployment pipeline. There are as many ways to build and deploy a component library as there are component libraries, but the following practices are baseline industry standards:
 
@@ -50,15 +50,15 @@ Your component library is a product and should be treated as such. In addition t
 
 * Once the build and all automated checks have succeeded, set up your pipeline to release online documentation and publish your components in the desired format, usually an NPM (Node Package Manager) package or a CDN (Content Delivery Network) url. Use semantic versioning and release notes so consumers can pick the version they want to use and know what has been changed in each version.
 
-## *Best practices*
+## Best practices
 
-### *Branding and theming*
+### Branding and theming
 
 Once you have set up a style dictionary, pass CSS tokens to the components using CSS custom properties, sometimes called CSS variables. CSS custom properties can change values “on the fly” while an application is running, so you won’t need to rebuild your components every time the CSS tokens are updated. CSS custom properties also make it easy for your components to support multiple themes, a light theme and a dark theme for example, or even multiple brands, a.k.a. white labeling. 
 
 Typically the custom properties are defined in a global stylesheet hosted by the application using the components. Each brand has a separate stylesheet and each stylesheet defines all the themes supported by the brand. For example:
 
-### *Accessibility*
+### Accessibility
 
 Accessible UI components are the foundation of any accessible web application. Components must be built to be accessible from the start. Building components and adding accessibility “features” later will only lead to frustration and unneeded work. Ideally your team will have some basic accessibility training and know their way around the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/). It’s also wise to have an accessibility specialist on hand who can highlight accessibility issues and deal with the hardest problems. In addition, the following practices are recommended to ensure that your components remain accessible during the lifetime of your component library:
 
@@ -70,10 +70,9 @@ Accessible UI components are the foundation of any accessible web application. C
 
 * Help consumers of your components use them in an accessible way. Documentation is great, but console warnings are even better.
 
-  For example, web components have some unfortunate quirks when it comes to ARIA attributes. (There is a [mature proposal](https://github.com/WICG/webcomponents/blob/gh-pages/proposals/reference-target-explainer.md) on the table to address the issue but it is not part of the standard yet.) Adding the “aria-expanded” attribute to a web component that emits a button is valid HTML, but the browser will not interpret it correctly and the end user will not receive the information. Instead, component developers can create a custom attribute “expanded”, which will work correctly, and program a warning for consumers who try to use the aria attribute instead. For example:
+For example, web components have some unfortunate quirks when it comes to ARIA attributes. (There is a [mature proposal](https://github.com/WICG/webcomponents/blob/gh-pages/proposals/reference-target-explainer.md) on the table to address the issue but it is not part of the standard yet.) Adding the “aria-expanded” attribute to a web component that emits a button is valid HTML, but the browser will not interpret it correctly and the end user will not receive the information. Instead, component developers can create a custom attribute “expanded”, which will work correctly, and program a warning for consumers who try to use the aria attribute instead. For example:
 
-
-### *Scalability and performance*
+### Scalability and performance
 
 Web components are generally faster and more scalable than components written in a framework such as React or Vue, but the following approaches are recommended to keep your components as fast and scalable as possible: 
 
@@ -82,7 +81,6 @@ Web components are generally faster and more scalable than components written in
 * Make sure components have as few external dependencies as possible. If it looks like a plugin must be installed then discuss it with the team first.
 
 * Make sure components have as few dependencies on each other as possible. One component that imports two components that each import two more components and so on will quickly turn into a slow and unmanageable mess. A better approach, called composition, is to add “slots” to components so other components can be nested inside. For example:
-
 
 * Make sure consumers of your components can import one component at a time without loading the rest of the library in the background. Configure [separate entry points](https://vitejs.dev/guide/build.html#library-mode) for each component using Vite and [define exports](https://nodejs.org/api/packages.html#subpath-exports) in package.json.
 
