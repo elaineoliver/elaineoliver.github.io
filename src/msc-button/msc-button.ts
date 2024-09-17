@@ -91,7 +91,7 @@ export class MSCButton extends LitElement {
     .secondary {
       padding: 0 0.5lh;
       border-radius: 4px;
-      line-height: 2lh;
+      line-height: 1.75lh;
     }
 
     .primary {

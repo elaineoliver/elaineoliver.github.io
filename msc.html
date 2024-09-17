@@ -35,14 +35,16 @@
     </div>
     <form id="form" class="tile">
       <h2>Demo form</h2>
-      <p>This form displays an alert on submit</p>
-      <msc-button type="submit">Display an alert!</msc-button>
+      <msc-button type="submit">Submit</msc-button>
+      <p id="form-feedback" aria-live="polite"></p>
     </form>
     <script>
       const form = document.getElementById("form")
+      const formFeedback = document.getElementById("form-feedback")
 
-      form.addEventListener("submit", () => {
-        alert("The form was submitted!")
+      form.addEventListener("submit", (event) => {
+        event.preventDefault()
+        formFeedback.append("The form was submitted")
       })
     </script>
   </body>

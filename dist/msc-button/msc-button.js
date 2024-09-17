@@ -630,7 +630,7 @@ g.styles = lt`
     .secondary {
       padding: 0 0.5lh;
       border-radius: 4px;
-      line-height: 1.5lh;
+      line-height: 1.75lh;
     }
 
     .primary {

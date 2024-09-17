@@ -12,6 +12,13 @@ test.describe("msc-button", () => {
     await expect(button).toBeFocused();
   });
 
+  test(`Submits a form`, async ({ page }) => {
+    const button = page.getByRole("button", { name: "Submit" });
+    await button.click();
+    const feedback = page.getByText("The form was submitted");
+    expect(feedback).toBeDefined();
+  });
+
   test(`Looks fabulous`, async ({ page }) => {
     const screenshot = await page.screenshot();
     expect(screenshot).toMatchSnapshot({ maxDiffPixels: 10 });
